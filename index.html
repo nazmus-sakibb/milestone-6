@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Fancy Slider</title>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -28,14 +29,26 @@
       <div class="justify-content-around align-items-center mt-3 gallery-header mb-2">
         <h3 class="head-title text-center">Select image for create slider</h3>
         <div class="input-group col-md-3 mb-2 mb-md-0">
-          <input class="form-control" id="doration" placeholder="slider change duration">
+          <input class="form-control" id="duration" placeholder="slider change duration">
         </div>
         <button id="create-slider" class="btn btn-primary px-5">Create slider</button>
       </div>
-      <div class="row gallery">
+
+
+      <!-- Spinner - extra part for bonus mark -->
+    <div class="d-flex justify-content-center">
+      <div id="loading-spinner" class="spinner-border text-success d-none" role="status">
+        <span class="visually-hidden"></span>
+      </div>
+    </div>
+
+
+      <div id="gallery" class="row gallery">
 
       </div>
     </section>
+
+
     <!-- slider -->
     <div class="main">
       <section class="mt-5" id="sliders">
