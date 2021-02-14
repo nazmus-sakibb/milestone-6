@@ -45,10 +45,10 @@ const selectItem = (event, img) => {
   let item = sliders.indexOf(img);
   if (item === -1) {
     sliders.push(img);
-  } else {
+  } 
+  else {
     sliders.splice(img, 1);
   }
-  // console.log(sliders);
 }
 var timer;
 const createSlider = () => {
