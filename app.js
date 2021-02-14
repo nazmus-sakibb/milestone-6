@@ -46,8 +46,9 @@ const selectItem = (event, img) => {
   if (item === -1) {
     sliders.push(img);
   } else {
-    return;
+    sliders.splice(img, 1);
   }
+  // console.log(sliders);
 }
 var timer;
 const createSlider = () => {
@@ -70,7 +71,7 @@ const createSlider = () => {
   // hide image aria
   imagesArea.style.display = 'none';
   const duration = document.getElementById('duration').value || 1000;
-  if(duration < 1){
+  if(duration <= 0){
     alert('Please enter a positive duration');
     return;
   }
@@ -80,7 +81,7 @@ const createSlider = () => {
     item.innerHTML = `<img class="w-100"
     src="${slide}"
     alt="">`;
-    sliderContainer.appendChild(item)
+    sliderContainer.appendChild(item);
   })
   changeSlide(0)
   timer = setInterval(function () {
@@ -141,7 +142,7 @@ input.addEventListener("keyup", function(event) {
 
 
 sliderBtn.addEventListener('click', function () {
-  createSlider()
+  createSlider();
 })
 
 
